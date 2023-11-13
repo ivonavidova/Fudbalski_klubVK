@@ -2,6 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-     <div class="jumbotron">BUCIBUCIBU NJUNJUYNHJU NJU</div>
+     <div class="jumbotron">Test</div>
 
 </asp:Content>
