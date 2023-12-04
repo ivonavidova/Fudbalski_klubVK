@@ -2,7 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <table style="width: 40%;">
+        <h2>Unos igraca</h2>
+        <table style="width: 100%;">
             <tr>
                 <td><asp:Label ID="Label1" runat="server" Text="JMBG: "></asp:Label></td>
                 <td><asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></td>
@@ -26,7 +27,9 @@
             <tr>
                 <td><asp:Label ID="Label4" runat="server" Text="Datum rodjenja: "></asp:Label></td>
                 <td><asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></td>
-                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Niste popunili!" ControlToValidate="TextBox5" Display="Dynamic" ForeColor="Red">Niste popunili!</asp:RequiredFieldValidator></td>
+                <td><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Niste popunili!" ControlToValidate="TextBox5" Display="Dynamic" ForeColor="Red">Niste popunili!</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox5" Display="Dynamic" ErrorMessage="Unesite datum u formatu: YYYY-MM-DD" ForeColor="Red" ValidationExpression="\d\d\d\d-\d\d-\d\d">Unesite datum u formatu: YYYY-MM-DD</asp:RegularExpressionValidator>
+                </td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label5" runat="server" Text="Pozicija: "></asp:Label></td>
@@ -37,5 +40,6 @@
                 <td><asp:Button ID="Button1" runat="server" Text="Dodaj" OnClick="Button1_Click1" Width="96px" /></td>
             </tr>
         </table>
+        <asp:Label ID="Label7" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>

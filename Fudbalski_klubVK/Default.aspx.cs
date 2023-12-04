@@ -28,13 +28,14 @@ namespace Fudbalski_klubVK
                     SqlCommand cmd = new SqlCommand(queryRequest, conn);
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                    Label7.Text = "Uspesno ste upisali igraca!";
                 }
                 catch(Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                    Label7.Text = "Neuspesan upis!";
                 }
             }
-            
         }
     }
 }
