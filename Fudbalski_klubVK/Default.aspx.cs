@@ -18,12 +18,23 @@ namespace Fudbalski_klubVK
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            string queryRequest = "INSERT INTO Igrac VALUES ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "'," + TextBox4.Text + "," + TextBox5.Text + ",'" + TextBox6.Text + "')";
-            SqlConnection conn = new SqlConnection(Konekcija.conn);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(queryRequest, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (Page.IsValid)
+            {
+                try
+                {
+                    string queryRequest = "INSERT INTO Igrac VALUES ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "'," + TextBox4.Text + ",'" + TextBox5.Text + "','" + TextBox6.Text + "')";
+                    SqlConnection conn = new SqlConnection(Konekcija.conn);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(queryRequest, conn);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            
         }
     }
 }
