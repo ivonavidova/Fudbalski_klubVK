@@ -22,6 +22,21 @@ textarea {
 body{
 background-image:url('../images/bcg.jpg');
 
+background-repeat:no-repeat;
+background-color:forestgreen;
+background-size:cover;
 
+}
+background-image {
+    position: absolute;
+}
 
+.jumbotron {
+
+    color: white;
+    display: inline-block;
+    text-decoration: dotted;
+    padding: 70px;
+    background-color: rgba(0, 0, 0, 0.8);
+    
 }
